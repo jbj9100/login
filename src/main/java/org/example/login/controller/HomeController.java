@@ -27,6 +27,11 @@ public class HomeController {
             model.addAttribute("user", (User) user);
         }
 
+//        if (user instanceof User) {
+//            model.addAttribute("user", (User) user);
+//        } else {
+//            log.info("Anonymous user");
+//        }
         return "home";
     }
 }

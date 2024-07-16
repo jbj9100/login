@@ -4,23 +4,24 @@ spring:
   profiles:
     include: db
 
-  datasource:
-    url: jdbc:h2:D:\private_after\h2-db\h2-db
-    username: root
-    password: root
-
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
-
   session:
     store-type: jdbc
     jdbc:
       initialize-schema: always
+
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
+
+
+  datasource:
+    url: jdbc:h2:D:\private_after\h2-db\h2-db
+    username: root
+    password: root
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
@@ -32,7 +33,7 @@ spring:
         show_sql: true        # 쿼리 로그 출력
 #  datasource:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
-#    url: jdbc:mysql://192.168.60.191:30050/testdb
+#    url: jdbc:mysql://192.168.60.191:30050/login
 #    username: root
 #    password: root
 #
@@ -49,8 +50,8 @@ server:
   servlet:
     session:
       timeout: 30m
-#  servlet:
-#    context-path: /home
+    context-path: /
+
 logging:
   level:
     org:
