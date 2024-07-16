@@ -1,6 +1,5 @@
 package org.example.login.controller;
 
-import org.example.login.*;
 import lombok.RequiredArgsConstructor;
 import org.example.login.controller.dto.ClassSearch;
 import org.example.login.domain.Course;
