@@ -13,6 +13,13 @@ java {
     }
 }
 
+jar {
+    enabled=false
+    manifest {
+        attributes 'Main-Class': 'org.example.login.LoginApplication'
+    }
+}
+
 configurations {
     compileOnly {
         extendsFrom annotationProcessor
